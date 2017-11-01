@@ -1,6 +1,7 @@
 default:
 - '''self'''
 img:
+- '''self'''
 - 'https:'
 script:
 - '''self'''
