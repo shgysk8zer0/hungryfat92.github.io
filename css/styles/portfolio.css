@@ -1,0 +1,19 @@
+#portfolio.grid {
+	grid-template-columns: repeat(auto-fill, minmax(270px, 400px));
+	grid-gap: 0.6em;
+	justify-content: center;
+}
+
+#portfolio [itemprop="screenshot"] {
+	max-height: 12rem;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+[itemprop="workExample"]:hover {
+	box-shadow: 0 0 0.8em var(--accent-color);
+}
+
+[itemprop="workExample"] [itemprop="keywords"] {
+	font-size: 0.7em;
+}

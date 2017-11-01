@@ -1,0 +1,16 @@
+.icon-twirl:hover {
+	transform: rotate(360deg) scale(1.7);
+}
+
+[data-share] {
+	bottom: 0.5rem;
+	right: 0.5rem;
+	min-height: 2.3em;
+	min-width: 2.3em;
+	padding: 0.2em;
+}
+
+body > [data-share] {
+	width: 2.5em;
+	height: 2.5em;
+}

@@ -1,0 +1,45 @@
+<dialog id="about-dialog" class="fadeInUp animation-speed-normal animation-ease-in animation-fill-backwards">
+	<header class="sticky top background-primary">
+		<span class="clearfix">
+			<button data-close="#about-dialog" class="font-main filter-shadow right">X</button>
+		</span>
+	</header>
+	<figure class="clearfix">
+		<img
+			srcset="
+				https://gravatar.com/avatar/{{ site.gravatar }}?s=512 512w,
+				https://gravatar.com/avatar/{{ site.gravatar }}?s=400 400w,
+				https://gravatar.com/avatar/{{ site.gravatar }}?s=300 300w,
+				https://gravatar.com/avatar/{{ site.gravatar }}?s=256 256w,
+				https://gravatar.com/avatar/{{ site.gravatar }}?s=180 180w,
+				https://gravatar.com/avatar/{{ site.gravatar }}?s=128 128w,
+				https://gravatar.com/avatar/{{ site.gravatar }}?s=64 64w"
+			sizes="(orientation: portrait) 15vw, 12vw"
+			src="https://gravatar.com/avatar/{{ site.gravatar }}?s=256"
+			alt="Gravatar"
+			class="round shadow-dark left" />
+		<blockquote class="left">
+				{{ site.data.person.description }}
+			<cite>{{ site.data.person.givenName }} {{ site.data.person.familyName }}</cite>
+		</blockquote>
+	</figure>
+	<div class="skills center animation-stagger">
+		<svg width="48" height="48" class="trampoline animation-ease-in-out animation-infinite animation-speed-normal animation-overshoot animation-alternate">
+			<use xlink:href="{{ '/img/icons.svg#html5' | absolute_url }}" />
+		</svg>
+		<svg width="48" height="48" class="trampoline animation-ease-in-out animation-infinite animation-speed-normal animation-overshoot animation-alternate">
+			<use xlink:href="{{ '/img/icons.svg#css3' | absolute_url }}" />
+		</svg>
+		<svg width="48" height="48" class="trampoline animation-ease-in-out animation-infinite animation-speed-normal animation-overshoot animation-alternate">
+			<use xlink:href="{{ '/img/icons.svg#javascript' | absolute_url }}" />
+		</svg>
+		<img src="/img/logos/svg.svg" width="48" height="48" alt="MySQL" class="trampoline animation-ease-in-out animation-infinite animation-speed-normal animation-overshoot animation-alternate" />
+		<svg width="48" height="48" class="trampoline animation-ease-in-out animation-infinite animation-speed-normal animation-overshoot animation-alternate">
+			<use xlink:href="{{ '/img/icons.svg#git' | absolute_url }}" />
+		</svg>
+		<img src="/img/logos/PHP.svg" width="48" height="48" alt="PHP" class="trampoline animation-ease-in-out animation-infinite animation-speed-normal animation-overshoot animation-alternate-reverse" />
+		<svg width="48" height="48" class="trampoline animation-ease-in-out animation-infinite animation-speed-normal animation-overshoot animation-alternate-reverse">
+			<use xlink:href="{{ '/img/icons.svg#mysql' | absolute_url }}" />
+		</svg>
+	</div>
+</dialog>

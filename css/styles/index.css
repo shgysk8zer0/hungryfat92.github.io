@@ -1,0 +1,55 @@
+@charset "UTF-8";
+@import url("../core-css/viewport.css");
+@import url("../normalize/normalize.css");
+@import url("./vars.css");
+@import url("../core-css/rem.css");
+@import url("../core-css/fonts.css");
+@import url("../core-css/animations.css");
+@import url("../animate.css/animate.css");
+@import url("../core-css/class-rules.css");
+@import url("../core-css/element.css");
+@import url("../core-css/fonts.css");
+@import url("./layout.css");
+@import url("./icons.css");
+@import url("./header.css");
+@import url("./nav.css");
+@import url("./main.css");
+@import url("./pinned-posts.css");
+@import url("./recent-posts.css");
+@import url("./footer.css");
+@import url("./dialog.css");
+
+:root {
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+hr {
+	max-width: calc(100vw - 100px);
+	width: 100%;
+}
+
+svg {
+	max-width: 4em;
+	max-height: 4em;
+}
+
+.container.flex.row {
+	justify-content: space-evenly;
+}
+
+pre.highlight, code.highlight {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.6)
+}
+
+.no-js [data-show], .no-js [data-show-modal] {
+	cursor: not-allowed;
+}
+
+@media (max-width: 800px) {
+	.mobile-hidden {
+		display: none;
+	}
+}
