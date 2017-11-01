@@ -1,0 +1,20 @@
+:root {
+	--primary-color: #222;
+	--accent-color: #540054;
+	--default-color: #181818;
+	--alt-color: whitesmoke;
+	--link-color: #FF7B00;
+	--visited-color: var(--link-color);
+
+	--article-font: Roboto;
+
+	--nav-height: 5vh;
+	--backdrop-background: rgba(0,0,0,0.7);
+	--button-background: linear-gradient(#FF7B00, #A55200);
+	--button-color: var(--alt-color);
+	--header-image: url("http://wallpapercave.com/wp/wp1850708.jpg");
+}
+
+::backdrop {
+	--backdrop-background: rgba(0,0,0,0.7);
+}

@@ -1,0 +1,57 @@
+{
+  "name": "about",
+  "version": "3.2.14",
+  "description": "A responsive, progressive about / portfolio & blog page built using Jekyll",
+  "main": "index.html",
+  "scripts": {
+    "git:fetch": "git fetch --prune --tags",
+    "git:submodules": "git submodule update --init --recursive",
+    "lint": "npm run lint:all",
+    "lint:all": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint .",
+    "lint:css": "stylelint 'css/styles/*.css'",
+    "test": "npm run lint",
+    "build": "npm run build:all",
+    "build:css": "postcss -c postcss.config.json css/styles/index.css -o css/styles/index.min.css",
+    "build:js": "rollup --config rollup.config.js",
+    "build:icons": "svg-sprite-generate -c img/icons.csv -o img/icons.svg",
+    "build:all": "npm run build:icons && npm run build:css && npm run build:js",
+    "build:site": "npm run build:all && JEKYLL_ENV=production jekyll build",
+    "build:site:dev": "bundle exec jekyll build --incremental --drafts",
+    "postinstall": "npm run git:fetch && npm run git:submodules && npm run build:all",
+	"serve": "npm run serve:production --incremental",
+	"serve:production": "npm run build:all && JEKYLL_ENV=production bundle exec jekyll serve --incremental",
+	"serve:dev": "bundle exec jekyll serve --drafts --unpublished --future --profile --trace --strict_front_matter"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shgysk8zer0/shgysk8zer0.github.io.git"
+  },
+  "author": "Chris Zuber <chris@chriszuber.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/shgysk8zer0/shgysk8zer0.github.io/issues"
+  },
+  "homepage": "https://shgysk8zer0.github.io",
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "eslint-plugin-async-await": "0.0.0",
+    "stylelint": "^8.1.1",
+    "stylelint-config-recommended": "^1.0.0",
+    "stylelint-config-standard": "^17.0.0"
+  },
+  "dependencies": {
+    "postcss-calc": "^6.0.1",
+    "postcss-custom-properties": "^6.2.0",
+    "cssnano": "^3.10.0",
+    "postcss": "^6.0.12",
+    "postcss-cli": "^4.1.1",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-load-config": "^1.2.0",
+    "postcss-plugin": "^1.0.0",
+    "postcss-url": "^7.1.2",
+    "rollup": "^0.50.0",
+    "svg-sprite-generator": "0.0.7"
+  }
+}

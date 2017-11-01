@@ -1,0 +1,100 @@
+author: Daniel Moore
+title: Blog
+description: "A responsive, progressive about / portfolio & blog page built using Jekyll"
+keywords:
+  - jekyll
+markdown: kramdown
+respository: "hungryfat92/hungryfat92.github.io"
+lang: en_US
+dir: ltr
+feed: /feed.rss
+icons: '/img/icons.svg'
+theme-color: '#FC5B0B'
+github:
+  username: hungryfat92
+  repo: hungryfat92.github.io
+  url: "https://hungryfat92.github.io"
+# twitter:
+gravatar: 73f08dc9b030c584e76a4c3c4e8a56c0
+webmaster-verifications:
+#  google:
+#  bing:
+robots: 'nofollow,noindex'
+paginate: 5
+paginate_path: "/posts/page-:num/"
+defaults:
+  -
+    scope:
+      path: "_posts"
+    values:
+      layout: "post"
+      author: "Daniel Moore"
+      permalink: /posts/:categories/:year/:month/:day/:title/
+  -
+    scope:
+      path: "_drafts"
+    values:
+      layout: "post"
+      author: "Daniel Moore"
+      permalink: /posts/:categories/:year/:month/:day/:title/
+plugins:
+  - jekyll-gist
+  - jekyll-youtube
+  - jekyll-admin
+  - jekyll-avatar
+  # - jekyll-mentions
+  # - jekyll-github-metadata
+  - jekyll-paginate
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-include-cache
+  # - jekyll-seo-tag
+  # - jemoji
+  # - jekyll-octicons
+exclude:
+- "*.rb"
+- "*.gemspec"
+- "*.php"
+- "*.sh"
+- "*.csv"
+- "*.sfd"
+- "*.ai"
+- "*.psd"
+- "*.sketch"
+- "*.yml"
+- "*.lock"
+- "*.log"
+- "/css/*.md"
+- "/js/*.md"
+- "/img/*.md"
+- "/fonts/*.md"
+- "/js/*.json"
+- "/css/*.json"
+- "/img/*.json"
+- "/js/*.html"
+- Gemfile
+- node_modules/
+- docs
+- palette.xml
+- postcss.config.js
+- postcss.config.json
+- README.md
+- LICENSE
+- "*.config.js"
+- "/img/octicons/test"
+- "/img/octicons/*.js"
+- "/img/octicons/*.md"
+- "/img/octicons/LICENSE"
+- "/img/octicons/lib/*.css"
+- "/img/octicons/lib/octicons_gem"
+- "/img/octicons/lib/octicons_node"
+- "/img/octicons/lib/octicons_helper"
+- "/img/octicons/lib/jekyll-octicons"
+- "/img/octicons/script"
+- "/img/adwaita-icons/docs"
+- "/img/adwaita-icons/LICENSE"
+- "css/core-css/docs"
+- "css/normalize/*.html"
+- "js/std-js/docs"
+- "js/std-js/test"

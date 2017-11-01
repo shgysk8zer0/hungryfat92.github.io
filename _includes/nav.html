@@ -1,0 +1,33 @@
+<nav class="sticky top shadow-dark color-alt flex row title-font center no-text-decoration z-3" role="navigation" itemtype="http://schema.org/SiteNavigationElement" itemscope="">
+	{% if page.layout == 'home' %}
+		<a href="{{'/#top' | absolute_url }}" title="Top">
+			<svg class="current-color icon">
+				<use xlink:href="{{ site.icons | absolute_url | append: '#top' }}" />
+			</svg>
+			<span class="mobile-hidden">Top</span>
+		</a>
+	{% else %}
+		<a href="{{'/' | absolute_url }}" rel="bookmark" title="Home">
+			<svg class="current-color icon">
+				<use xlink:href="{{ site.icons | absolute_url | append: '#home' }}" />
+			</svg>
+			<span class="mobile-hidden">Home</span>
+		</a>
+	{% endif %}
+	{% if page.layout != 'full-width' %}
+	<a href="#pinned-posts" title="Pinned Posts">
+		<svg class="current-color icon">
+			<use xlink:href="{{ site.icons | absolute_url | append: '#pin' }}" />
+		</svg>
+		<span class="mobile-hidden">Pinned Posts</span>
+	</a>
+	<a href="#recent-posts" title="Recent Posts">
+		<svg class="current-color icon">
+			<use xlink:href="{{ site.icons | absolute_url | append: '#recent' }}" />
+		</svg>
+		<span class="mobile-hidden">Recent Posts</span>
+	</a>
+	{% else %}
+		<a href="{{ '/posts/' | absolute_url }}">Posts</a>
+	{% endif %}
+</nav>
