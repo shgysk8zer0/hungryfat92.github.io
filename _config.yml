@@ -9,7 +9,7 @@ lang: en_US
 dir: ltr
 feed: /feed.rss
 icons: '/img/icons.svg'
-theme-color: '#FC5B0B'
+theme-color: '#540054'
 github:
   username: hungryfat92
   repo: hungryfat92.github.io
@@ -20,6 +20,21 @@ webmaster-verifications:
 #  google:
 #  bing:
 robots: 'nofollow,noindex'
+version: 0.1.0
+appicons:
+  - src: /img/favicon.svg
+    sizes: any
+    type: image/svg+xml
+  - src: /img/icon-512.png
+    sizes: 512x512
+    type: image/png
+  - src: /img/icon-192.png
+    sizes: 192x192
+    type: image/png
+screenshots:
+  - src: 'https://i.imgur.com/edvCPWB.png'
+    sizes: 1083x582
+    type: image/png
 paginate: 5
 paginate_path: "/posts/page-:num/"
 defaults:
