@@ -505,7 +505,10 @@ template {
 	--backdrop-background: rgba(0,0,0,0.7);
 	--button-background: linear-gradient(#FF7B00, #A55200);
 	--button-color: var(--alt-color);
-	--header-image: url("https://wallpapercave.com/wp/wp1850708.jpg");
+	--header-image: url("/img/background.jpg");
+	--header-large: url("/img/background-1200.jpg");
+	--header-medium: url("/img/background-800.jpg");
+	--header-small: url("/img/background-400.jpg");
 }
 
 ::backdrop {
@@ -3954,7 +3957,25 @@ body > [data-share] {
 body > header {
 	grid-area: header;
 	background-image: var(--header-image);
-	background-position: bottom;
+	background-position: bottom center;
+}
+
+@media (max-width: 1200px), (max-height: 675px) {
+	body > header {
+		background-image: var(--header-large);
+	}
+}
+
+@media (max-width: 800px), (max-height: 450px) {
+	body > header {
+		background-image: var(--header-medium);
+	}
+}
+
+@media (max-width: 400px), (max-height: 225px) {
+	body > header {
+		background-image: var(--header-small);
+	}
 }
 
 body > nav {
@@ -3986,6 +4007,10 @@ body > nav > *:not(:last-child) {
 
 body > nav > *:hover {
 	background-image: linear-gradient(#222, #444);
+}
+
+nav a {
+	color: var(--alt-color);
 }
 
 #portfolio.grid {
