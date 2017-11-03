@@ -4,7 +4,7 @@ A responsive, progressive about / portfolio & blog page built using Jekyll
 
 - - -
 [![Build Status](https://travis-ci.org/hungryfat92/hungryfat92.github.io.svg?branch=master)](https://travis-ci.org/hungryfat92/hungryfat92.github.io)
-[![GitHub license](https://img.shields.io/badge/license-GPL3-blue.svg)](https://raw.githubusercontent.com/hungryfat92/hungryfat92.github.io/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/hungryfat92/hungryfat92.github.io.svg)](https://github.com/hungryfat92/hungryfat92.github.io/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/hungryfat92/hungryfat92.github.io.svg)](https://github.com/hungryfat92/hungryfat92.github.io/releases)
 [![GitHub issues](https://img.shields.io/github/issues/hungryfat92/hungryfat92.github.io.svg)](https://github.com/hungryfat92/hungryfat92.github.io/issues)
 [![GitHub forks](https://img.shields.io/github/forks/hungryfat92/hungryfat92.github.io.svg)](https://github.com/hungryfat92/hungryfat92.github.io/network)
