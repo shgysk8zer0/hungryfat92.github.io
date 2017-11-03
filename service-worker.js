@@ -7,6 +7,7 @@ const config = {
 		'/js/index.min.js',
 		'/css/styles/index.min.css',
 		'/img/icons.svg',
+		'/img/favicon.svg',
 
 		// Nav menu icons
 		'/img/adwaita-icons/actions/document-open-recent.svg',
