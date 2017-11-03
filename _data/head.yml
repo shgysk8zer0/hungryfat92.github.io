@@ -8,7 +8,7 @@ meta:
   thumbnail: 'https://i.imgur.com/edvCPWB.png'
 canonical: 'https://hungryfat92.github.io'
 manifest: /manifest.json
-# service_worker: /service-worker.js
+service_worker: /service-worker.js
 scripts:
   development:
     - src: 'https://cdn.polyfill.io/v2/polyfill.min.js'

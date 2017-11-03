@@ -1,3 +1,4 @@
+// 2017-11-02 16:19
 const config = {
 	version: '0.1.0',
 	caches: [
@@ -14,15 +15,14 @@ const config = {
 		'/img/adwaita-icons/places/folder-publicshare.svg',
 
 		// Logos
-		'/img/logos/super-user.svg',
-		'/img/logos/css3.svg',
-		'/img/logos/PHP.svg',
-		'/img/logos/svg.svg',
 		'/img/logos/Facebook.svg',
 		'/img/logos/twitter.svg',
 		'/img/logos/linkedin.svg',
 		'/img/logos/Google_plus.svg',
 		'/img/logos/Reddit.svg',
+
+		// Images
+		'/img/background.jpg',
 
 		// Fonts
 		'/fonts/acme.woff',
@@ -32,15 +32,10 @@ const config = {
 
 		// External Resources
 		'https://cdn.polyfill.io/v2/polyfill.min.js',
-		'https://media.githubusercontent.com/media/shgysk8zer0/awesome-rss/master/screenshot.png',
-		'https://i.imgur.com/qdnVcJA.png',
-		'https://i.imgur.com/j8gd6rW.png',
-		'https://i.imgur.com/OXN2pCz.png',
-		'https://i.imgur.com/WIaJgfx.png',
-		'https://i.imgur.com/c1hLkNj.png',
 	],
 	ignored: [
 		'/service-worker.js',
+		'/manifest.json',
 	],
 	paths: [
 		'/js/',
@@ -100,29 +95,33 @@ addEventListener('fetch', event => {
 		}
 	}
 
+	async function get(request) {
+		const cache = await caches.open(config.version);
+		const cached = await cache.match(request);
+
+		if (navigator.onLine) {
+			const fetched = fetch(request).then(async resp => {
+				if (resp.ok && isValid(resp)) {
+					const respClone = await resp.clone();
+					await cache.put(event.request, respClone);
+					return resp;
+				} else {
+					return resp;
+				}
+			});
+			if (cached instanceof Response) {
+				return cached;
+			} else {
+				return fetched;
+			}
+		} else {
+			return cached;
+		}
+	}
+
 	if (event.request.method !== 'GET') {
 		return;
 	}
 
-	event.respondWith(async function() {
-		try {
-			const cache = await caches.open(config.version);
-			const response = await cache.match(event.request);
-
-			if (response instanceof Response) {
-				return response;
-			} else if (navigator.onLine) {
-				const fetched = await fetch(event.request);
-
-				if (isValid(fetched)) {
-					const respClone = await fetched.clone();
-					await cache.put(event.request, respClone);
-				}
-				return fetched;
-			}
-		} catch (err) {
-			console.error(err);
-			return fetch(event.request);
-		}
-	}());
+	event.respondWith(get(event.request));
 });

@@ -1,5 +1,23 @@
 body > header {
 	grid-area: header;
 	background-image: var(--header-image);
-	background-position: bottom;
+	background-position: bottom center;
+}
+
+@media (max-width: 1200px), (max-height: 675px) {
+	body > header {
+		background-image: var(--header-large);
+	}
+}
+
+@media (max-width: 800px), (max-height: 450px) {
+	body > header {
+		background-image: var(--header-medium);
+	}
+}
+
+@media (max-width: 400px), (max-height: 225px) {
+	body > header {
+		background-image: var(--header-small);
+	}
 }

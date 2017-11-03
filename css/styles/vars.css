@@ -12,7 +12,10 @@
 	--backdrop-background: rgba(0,0,0,0.7);
 	--button-background: linear-gradient(#FF7B00, #A55200);
 	--button-color: var(--alt-color);
-	--header-image: url("https://wallpapercave.com/wp/wp1850708.jpg");
+	--header-image: url("/img/background.jpg");
+	--header-large: url("/img/background-1200.jpg");
+	--header-medium: url("/img/background-800.jpg");
+	--header-small: url("/img/background-400.jpg");
 }
 
 ::backdrop {
