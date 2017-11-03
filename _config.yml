@@ -1,8 +1,10 @@
 author: Daniel Moore
 title: Blog
-description: "A responsive, progressive about / portfolio & blog page built using Jekyll"
+description: "My journal as a Progressive Web App built using Jekyll"
 keywords:
   - jekyll
+  - blog
+  - journal
 markdown: kramdown
 respository: "hungryfat92/hungryfat92.github.io"
 lang: en_US
